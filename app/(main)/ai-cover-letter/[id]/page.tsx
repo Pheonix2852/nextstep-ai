@@ -12,7 +12,7 @@ interface EditCoverLetterPageProps {
 }
 
 export default async function EditCoverLetterPage({ params }: EditCoverLetterPageProps) {
-  const { id } = await params;
+  const { id } = params;
   const coverLetter = await getCoverLetter(id);
 
   return (
