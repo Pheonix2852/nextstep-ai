@@ -5,13 +5,7 @@ import { getCoverLetter } from "@/actions/cover-letter";
 import CoverLetterPreview from "../_components/cover-letter-preview";
 
 
-interface EditCoverLetterPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function EditCoverLetterPage({ params }: EditCoverLetterPageProps) {
+export default async function EditCoverLetterPage({ params }: { params: { id: string } }) {
   const { id } = params;
   const coverLetter = await getCoverLetter(id);
 
