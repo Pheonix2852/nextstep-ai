@@ -4,10 +4,9 @@ import { Button } from "@/components/ui/button";
 import { getCoverLetter } from "@/actions/cover-letter";
 import CoverLetterPreview from "../_components/cover-letter-preview";
 
+
 interface EditCoverLetterPageProps {
-  params: {
-    id: string;
-  };
+  params: { id: string };
 }
 
 export default async function EditCoverLetterPage({ params }: EditCoverLetterPageProps) {
