@@ -10,7 +10,8 @@ const OnboardingPage = async () => {
 
    if(isOnboarded){
     redirect("/dashboard");
-}
+  }
+  
   return (
     <main> 
       <OnboardingForm industries={industries}/>

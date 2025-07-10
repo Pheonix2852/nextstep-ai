@@ -56,7 +56,8 @@ export async function updateUser(data: UpdateUserData) {
                         industry: data.industry,
                         experience: data.experience,
                         bio: data.bio,
-                        skills: data.skills
+                        skills: data.skills,
+                        isOnboarded: true,
                     }
                 });
 
