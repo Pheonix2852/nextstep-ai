@@ -23,6 +23,7 @@ Ace your interviews with tailored AI-driven prep. Get personalized tips, common 
 ## 🌟 Tech Stack
 
 - **Next.js**: Fast, scalable React framework to power the front-end.
+- **TypeScript**: Provides strong typing and error checking to ensure reliable, maintainable code.
 - **Tailwind CSS**: Utility-first CSS framework for clean and responsive UI design.
 - **Gemini AI API**: Used for AI-driven content generation, insights, and recommendations.
 - **Prisma**: ORM for seamless database integration with **Neon DB**.
