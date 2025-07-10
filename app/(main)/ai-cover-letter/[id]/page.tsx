@@ -1,3 +1,4 @@
+import type { PageProps } from "next/types";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,7 @@ type Props = {
   };
 };
 
-export default async function EditCoverLetterPage({ params }: Props) {
+export default async function EditCoverLetterPage({ params }: { params: { id: string } }) {
   const { id } = params;
   const coverLetter = await getCoverLetter(id);
 
