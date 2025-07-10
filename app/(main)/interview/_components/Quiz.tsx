@@ -100,7 +100,7 @@ const Quiz = () => {
 
         const typedResult = {
         ...resultData,
-        questions: resultData.questions as QuestionResult[],
+        questions: resultData.questions as unknown as QuestionResult[],
         };
 
         return (
