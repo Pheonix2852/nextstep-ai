@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ui/header.jsx", "data/features.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ui/header.jsx", "data/features.js", "app/(main)/ai-cover-letter/[id]/page.jsx"],
   "exclude": ["node_modules"]
 }
