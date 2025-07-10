@@ -8,6 +8,8 @@ const InterviewPage = async () => {
 
   const rawAssessments = await getAssessments();
 
+  
+
   const assessments = rawAssessments.map((a: any) => ({
     ...a,
     questions: (a.questions ?? []).filter((q: any) => q !== null) as QuestionResult[],

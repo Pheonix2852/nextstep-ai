@@ -1,6 +1,6 @@
 "use client"
 
-import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { format } from 'date-fns'
 import React, { useEffect, useState } from 'react'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
@@ -11,12 +11,13 @@ import { QuestionResult } from './quiz-result'
   };
 
 
-  type Assessment = {
-    quizScore: number;
-    questions: QuestionResult[];
-    improvementTip?: string | null;
-    createdAt?: Date;
-  };
+  export type Assessment = {
+  id: string;
+  quizScore: number;
+  createdAt: string;
+  questions: QuestionResult[];
+  improvementTip?: string | null;
+};
 
 
 const PerformanceChart: React.FC<StatsCardsProps> = ({ assessments }) => {

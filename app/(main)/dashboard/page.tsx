@@ -3,7 +3,7 @@ import { getIndustryInsights } from '@/actions/dashboard';
 import { getUserOnboardingStatus } from '@/actions/user';
 import { redirect } from 'next/navigation';
 import React from 'react';
-import DashboardView from './_components/dashboard-view';
+import DashboardView, { SalaryRange } from './_components/dashboard-view';
 
 const IndustryInsightsPage = async () => {
   const { isOnboarded } = await getUserOnboardingStatus();
@@ -18,7 +18,7 @@ const IndustryInsightsPage = async () => {
   const formattedInsights = {
     id: insights.id,
     industry: insights.industry,
-    salaryRanges: insights.salaryRanges as any,
+    salaryRanges: insights.salaryRanges as SalaryRange[],
     marketOutlook: insights.marketOutlook as string,
     demandLevel: insights.demandLevel as string,
     nextUpdate: insights.nextUpdate ?? new Date(),

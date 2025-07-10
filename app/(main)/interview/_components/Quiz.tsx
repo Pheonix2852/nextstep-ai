@@ -18,12 +18,6 @@ const Quiz = () => {
     const [answers, setAnswers] = useState<(string | null)[]>([]);
     const [showExplanation, setShowExplanation] = useState(false)
 
-    type GenerateQuizParams = {
-        industry: string;
-        skills: string[];
-    }
-
-
     const {
         loading: genaratingQuiz,
         fn: generateQuizFn,
