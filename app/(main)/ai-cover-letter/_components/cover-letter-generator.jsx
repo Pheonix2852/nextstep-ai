@@ -18,12 +18,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { generateCoverLetter } from "@/actions/cover-letter";
 import useFetch from "@/hooks/use-fetch";
+import { coverLetterSchema } from "@/app/lib/schema";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { coverLetterSchema } from "@/app/lib/schema";
-import z from "zod";
-
-type CoverLetterFormData = z.infer<typeof coverLetterSchema>;
 
 export default function CoverLetterGenerator() {
   const router = useRouter();
@@ -52,18 +49,13 @@ export default function CoverLetterGenerator() {
     }
   }, [generatedLetter]);
 
-  const onSubmit = async (data: CoverLetterFormData) => {
-  try {
-    await generateLetterFn(data);
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      toast.error(error.message);
-    } else {
-      toast.error("Failed to generate cover letter");
+  const onSubmit = async (data) => {
+    try {
+      await generateLetterFn(data);
+    } catch (error) {
+      toast.error(error.message || "Failed to generate cover letter");
     }
-  }
-};
-
+  };
 
   return (
     <div className="space-y-6">
