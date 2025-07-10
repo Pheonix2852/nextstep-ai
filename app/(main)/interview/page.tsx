@@ -2,11 +2,16 @@ import { getAssessments } from '@/actions/interview'
 import React from 'react'
 import StatsCards from './_components/stats-card';
 import PerformanceChart from './_components/performance-chart';
-import QuizList from './_components/quiz-list';
+import QuizList, { QuestionResult } from './_components/quiz-list';
 
 const InterviewPage = async () => {
 
-  const assessments = await getAssessments();
+  const rawAssessments = await getAssessments();
+
+  const assessments = rawAssessments.map((a: any) => ({
+    ...a,
+    questions: (a.questions ?? []).filter((q: any) => q !== null) as QuestionResult[],
+  }));
 
   return (
     <div>
