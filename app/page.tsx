@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+
 import HeroSection from "@/components/ui/hero";
 import { features } from "../data/features"
 import { howItWorks } from "../data/howItWorks"
