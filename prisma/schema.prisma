@@ -20,7 +20,7 @@ model User{
   email                String                  @unique
   name                 String?                 
   imageUrl             String?                 @unique
-  industry             String?                 @unique
+  industry             String?                 
   industryInsight      IndustryInsight?        @relation(fields: [industry], references: [industry])
   isOnboarded          Boolean                 @default(false)
   createdAt            DateTime                @default(now())
